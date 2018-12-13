@@ -96,8 +96,7 @@ class Main {
 		);
 		//add_filter( 'wp-devops\must_have_plugins', function( $config ) { return array(); });
 		$config = apply_filters( 'wp-devops\must_have_plugins', $config );
-		// WP_Dependency_Installer::init();
-		// WP_Dependency_Installer::get_instance()->register( $config );
+
 		WP_Dependency_Installer::init( $config );
 		WP_Screen::init();
 		WP_Menu::init();
