@@ -288,6 +288,12 @@ class WP_Dependency_Installer {
 		if ( ! current_user_can( 'update_plugins' ) ) {
 			return false;
 		}
+
+		global $pagenow;
+		if ('plugins.php' !== $pagenow && 'themes.php' !== $pagenow) {
+			return false;
+		}
+
 		$message = null;
 		foreach ( $this->notices as $notice ) {
 			$status      = empty( $notice['status'] ) ? 'updated' : $notice['status'];
