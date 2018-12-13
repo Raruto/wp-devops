@@ -270,8 +270,8 @@ class Mass_ImportExport {
 			printf(
 				'<div id="message" class="updated fade">' .
 				_n(
-					'Emailed %s post to Eric.',
-					'Emailed %s posts to Eric.',
+					'%s plugin updated',
+					'%s plugins updated',
 					$count,
 					Constants::$PLUGIN_TEXT_DOMAIN
 				) . '</div>', $count
