@@ -109,7 +109,7 @@ class WP_Dependency_Installer {
 		add_action( 'network_admin_notices', array( $this, 'admin_notices' ) );
 		add_action( 'wp_ajax_dependency_installer', array( $this, 'ajax_router' ) );
 
-		self::$dismissible_notices         = false; // disable \PanD.
+		self::$dismissible_notices         = true; // disable \PanD.
 		self::$automatic_activate_required = false;
 		self::$automatic_install_required  = false;
 

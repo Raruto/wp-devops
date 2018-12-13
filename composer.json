@@ -2,10 +2,11 @@
 	"name": "raruto/wp-devops",
 	"description": "Devops Tools Plugin",
 	"license": "GPL-2.0-or-later",
-	"require": {},
+	"require": {
+	},
 	"autoload": {
 		"psr-4": {
-			"Raruto\\": ["src/"]
+			"Raruto\\": "src/"
 		}
 	}
 }
