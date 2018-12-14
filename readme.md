@@ -4,7 +4,7 @@ A useful helper plugin for every wordpress developer
 
 It contains:
 - **WP Dependecy Installer**: automatically install required WordPress/Git plugins or themes as JSON dependencies (based on: [afragen/wp-dependency-installer](https://github.com/afragen/wp-dependency-installer))
-- **Mass_ImportExport**: allows to mass import/export a list of the current installed plugins as "composer.json" or "github-updater.json" file (kudos to [tomjn/composerpress](https://github.com/tomjn/composerpress))
+- **Mass Import/Export**: allows to mass import/export a list of the current installed plugins as "composer.json" or "github-updater.json" file (kudos to [tomjn/composerpress](https://github.com/tomjn/composerpress))
 - **Local Development**: displays which plugins are in active development for the current machine
 - **Github Updater Icon Links**: displays wich plugins are on the "wp.org/githost" directory (based on: [szepeviktor/github-link](https://github.com/szepeviktor/github-link))
 - **Hide Plugins**: selectively hide plugins to other users within the plugins.php page (based on: [ThemeBoy/hide-plugins](https://github.com/ThemeBoy/hide-plugins/))
