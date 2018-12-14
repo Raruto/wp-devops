@@ -20,13 +20,13 @@ It contains
 
 ## Some Screenshots
 
-**Plugins Page**
+**Plugins Page:**
 
 <p align="left">
   <a href="https://raruto.github.io" rel="nofollow"><img src="https://raruto.github.io/img/wp-devops-plugins-page.png" alt="plugins.php page" /></a>
 </p>
   
-**Plugins Bulk Actions**
+**Plugins Bulk Actions:**
 
 <p align="left">
   <a href="https://raruto.github.io" rel="nofollow"><img src="https://raruto.github.io/img/wp-devops-bulk-actions.png" alt="plugins.php bulk actions" /></a>
