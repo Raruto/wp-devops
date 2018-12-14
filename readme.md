@@ -9,7 +9,7 @@ It contains
 - **Github Updater Icon Links**: displays wich plugins are on the "wp.org/githost" directory (based on: [szepeviktor/github-link](https://github.com/szepeviktor/github-link))
 - **Hide Plugins**: selectively hide plugins to other users within the plugins.php page (based on: [ThemeBoy/hide-plugins](https://github.com/ThemeBoy/hide-plugins/))
 - **WP DevOps Links**: add some handy links within the "wp-devops" plugin's row
-- **WP Menu**: add some handy links within the "wpadminbar" menu
+- **WP Menu**: add some handy links within the "wpadminbar" menu and display a visual alert to allow us to easily distinguish a production/development site
 
 ## How to use:
 
