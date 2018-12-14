@@ -18,7 +18,7 @@ It contains
 3. an admin notification will allow you to automatically install the GitHub Updater plugin
 4. explore all the features offered by the plugin and propose your improvements!
 
-## Some Screenshots
+## Some Screenshots:
 
 **Plugins Page:**
 
