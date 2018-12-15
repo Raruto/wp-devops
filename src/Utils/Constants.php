@@ -82,7 +82,7 @@ class Constants {
 		self::$PLUGIN_ROOT_FILE   = self::$PLUGIN_ROOT . $plugin_name . '.php';
 		self::$PLUGIN_SLUG        = $plugin_name . '/' . basename( self::$PLUGIN_ROOT_FILE );
 		self::$PLUGIN_ICON_FOLDER = 'assets/img/icon/';
-		self::$PLUGIN_CSS_FOLDER = 'assets/css/';
+		self::$PLUGIN_CSS_FOLDER  = 'assets/css/';
 		self::$PLUGIN_TEXT_DOMAIN = 'wp-devops';
 	}
 

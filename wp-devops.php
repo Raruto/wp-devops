@@ -16,5 +16,6 @@ require __DIR__ . '/vendor/autoload.php';
 
 // Plugin Initialization
 add_action( 'plugins_loaded', array( 'Raruto\\Main', 'init' ) );
+register_activation_hook( __FILE__, array( 'Raruto\\Main', 'install') );
 
 // register_activation_hook( __FILE__, array( 'Raruto\\Main', 'register_must_have_plugins' ) );

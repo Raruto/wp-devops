@@ -13,6 +13,9 @@ namespace Raruto;
 use Raruto\Controller\WP_Dependency_Installer;
 use Raruto\Controller\WP_Screen;
 use Raruto\Controller\WP_Menu;
+use Raruto\Controller\GHU_Rest_Update;
+use Raruto\Controller\WP_Rest_Log_Table;
+use Raruto\Controller\GHU_Tabs;
 use Raruto\Utils\Constants;
 use Raruto\Utils\WP_Constants;
 use Raruto\Utils\WP_Hooks;
@@ -100,6 +103,10 @@ class Main {
 		WP_Dependency_Installer::init( $config );
 		WP_Screen::init();
 		WP_Menu::init();
+		GHU_Tabs::init();
+
+		GHU_Rest_Update::init();
+		WP_Rest_Log_Table::update_db_table(); // Trick to update database version of the plugin
 
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_styles' ) );
 
@@ -119,5 +126,12 @@ class Main {
 		if ( is_user_logged_in() ) {
 			wp_enqueue_style( 'wp-devops/logged-user-style', plugins_url( Constants::$PLUGIN_CSS_FOLDER . 'logged-user.css', Constants::$PLUGIN_SLUG ), array(), '1.0' );
 		}
+	}
+
+	/**
+	 * Runs via plugin activation hook
+	 */
+	public static function install() {
+		WP_Rest_Log_Table::update_db_table(); // create a database table ("ghu-logs")
 	}
 }
