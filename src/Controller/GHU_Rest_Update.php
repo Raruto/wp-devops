@@ -63,7 +63,7 @@ if ( ! defined( 'WPINC' ) ) {
 		add_action( 'wp_ajax_github-updater-update', array( &$this, 'ajax_update' ) , 0 );
 		add_action( 'wp_ajax_nopriv_github-updater-update', array( &$this, 'ajax_update' ), 0 );
 		add_action( 'github_updater_pre_rest_process_request', array( &$this, 'pre_rest_process_request' ) );
-		add_action( 'github_updater_post_rest_process_request', array( &$this, 'after_rest_process_request' ), 10, 2 );
+		add_action( 'github_updater_post_rest_process_request', array( &$this, 'post_rest_process_request' ), 10, 2 );
  	}
 
  	public function ajax_update() {
@@ -79,7 +79,7 @@ if ( ! defined( 'WPINC' ) ) {
 		}
 	}
 
-	public function after_rest_process_request( $response, $status_code ) {
+	public function post_rest_process_request( $response, $status_code ) {
 		$elapsed_time = trim(str_replace("ms", "", $response['elapsed_time']));
 		if( (float) $elapsed_time >= 1000){
 			$elapsed_time = number_format($elapsed_time / 1000, 2) . " s";
