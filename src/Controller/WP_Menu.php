@@ -134,6 +134,11 @@ class WP_Menu {
 	public function add_css_footer() {
 		// echo '<p>This is inserted at the bottom</p>';
 		$is_localhost = Util::is_localhost();
+
+		if(false == $is_localhost) {
+			return; // temporary disabled on live server.
+		}
+
 		$warning_message = $is_localhost ? 'localhost' : network_site_url( '/' );
 		$warning_color = $is_localhost ? '#008000' : '#dc3232';
 		?>
