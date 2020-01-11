@@ -41,12 +41,23 @@ class GHU_Icon_Links {
 	public function init_hooks() {
 		include_once ABSPATH . '/wp-admin/includes/plugin.php';
 
+		$this->extra_plugin_headers = array( 'GitHub Plugin URI', 'GitLab Plugin URI', 'Bitbucket Plugin URI' );
+
+		add_filter( 'extra_plugin_headers', array( &$this, 'extra_plugin_headers' ) );
+
 		$installed_plugins = get_plugins();
 
 		foreach ( $installed_plugins as $plugin_slug => $plugin_data ) {
 			add_filter( "plugin_action_links_{$plugin_slug}", array( &$this, 'plugin_action_links' ), 1000, 4 );
 			add_filter( "network_admin_plugin_action_links_{$plugin_slug}", array( &$this, 'plugin_action_links' ), 1000, 4 );
 		}
+	}
+
+	/**
+	 * Add custom git plugin headers
+	 */
+	public function extra_plugin_headers() {
+		return $this->extra_plugin_headers;
 	}
 
 	/**
@@ -70,7 +81,7 @@ class GHU_Icon_Links {
 
 		$branch = ! empty( $plugin_data['branch'] ) ? $plugin_data['branch'] : 'master';
 
-		foreach ( array( 'GitHub Plugin URI', 'GitLab Plugin URI', 'Bitbucket Plugin URI' ) as $header ) {
+		foreach ( $this->extra_plugin_headers as $header ) {
 			if ( ! empty( $plugin_data[ $header ] ) ) {
 				$githost_name = preg_replace( '/ Plugin URI$/', '', $header );
 				$new_action   = array(

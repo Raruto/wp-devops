@@ -10,6 +10,6 @@
  * Version: 0.0.1
  */
 
-.logged-in #wpadminbar       { opacity:0; transition: opacity 2s ease-out; }
-.logged-in #wpadminbar:hover { opacity: 1; transition: opacity 0.5s ease-in; }
-html.js                      { margin-top: 0 !important; }
+/* .logged-in #wpadminbar       { opacity:0; transition: opacity 2s ease-out; } */
+/* .logged-in #wpadminbar:hover { opacity: 1; transition: opacity 0.5s ease-in; } */
+/* html.js                      { margin-top: 0 !important; }  */
