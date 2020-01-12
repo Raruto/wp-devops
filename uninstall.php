@@ -29,4 +29,4 @@ if ( ! defined( 'WP_UNINSTALL_PLUGIN' ) ) {
 }
 
 // Delete Logs Table
-// Raruto\Controller\WP_Rest_Log_Table::drop_db_table();
+Raruto\Controller\WP_Rest_Log_Table::drop_db_table();

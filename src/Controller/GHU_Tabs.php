@@ -247,8 +247,8 @@ if ( ! defined( 'WPINC' ) ) {
 	 * @return [type] [description]
 	 */
 	public function after_github_updater_remote_management(){
-		// $table = new WP_Rest_Log_Table();
-		// $table->output();
+		$table = new WP_Rest_Log_Table();
+		$table->output();
 	}
 
 	/**
