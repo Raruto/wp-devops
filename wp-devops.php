@@ -8,7 +8,7 @@
  * Author: Raruto
  * Author URI: https://github.com/Raruto
  *
- * Version: 0.0.3
+ * Version: 0.0.4
  */
 
 // Composer Autoloader
