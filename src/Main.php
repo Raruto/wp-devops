@@ -105,8 +105,8 @@ class Main {
 		WP_Menu::init();
 		GHU_Tabs::init();
 
-		GHU_Rest_Update::init();
-		WP_Rest_Log_Table::update_db_table(); // Trick to update database version of the plugin
+		// GHU_Rest_Update::init();
+		// WP_Rest_Log_Table::update_db_table(); // Trick to update database version of the plugin
 
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_styles' ) );
 
